@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textView1: TextView
     private lateinit var textView2: TextView
     private lateinit var textView3: TextView
-    private lateinit var textView4: TextView
+
     private lateinit var textView5: TextView
 
     private lateinit var buttonRed: Button
@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         textView1 = findViewById(R.id.textView1)
         textView2 = findViewById(R.id.textView2)
         textView3 = findViewById(R.id.textView3)
-        textView4 = findViewById(R.id.textView4)
         textView5 = findViewById(R.id.textView5)
         buttonRed = findViewById(R.id.buttonRed)
         buttonYellow = findViewById(R.id.buttonYellow)
@@ -41,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         textView1.setOnClickListener { changeColor(it) }
         textView2.setOnClickListener { changeColor(it) }
         textView3.setOnClickListener { changeColor(it) }
-        textView4.setOnClickListener { changeColor(it) }
+
         textView5.setOnClickListener { changeColor(it) }
         squareTextView.setOnClickListener { changeColor(it) }
 
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             textView1 -> changeColor(textView1)
             textView2 -> changeColor(textView2)
             textView3 -> changeColor(textView3)
-            textView4 -> changeColor(textView4)
+
             textView5 -> changeCol(textView5)
             squareTextView -> changeColo(squareTextView)
         }
@@ -81,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun assignRandomColor(color: Int) {
-        val textViews = arrayOf(textView1, textView2, textView3, textView4 )
+        val textViews = arrayOf(textView1, textView2, textView3 )
         val randomTextView = textViews.random()
         randomTextView.setBackgroundColor(color)
     }
